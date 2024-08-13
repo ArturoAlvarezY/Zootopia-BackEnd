@@ -32,7 +32,7 @@ public class Config {
             .csrf(csrf -> csrf.disable())
             .formLogin(form -> form.disable())
             .logout(out -> out
-                .logoutUrl(endpoint + "/logout")
+                .logoutUrl(endpoint + "/logout") ///localhost:8080/api/v1/logout for fetch the logout
                 .deleteCookies("JSESSIONID")
                 )
           .authorizeHttpRequests(auth -> auth
